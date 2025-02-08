@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*Обнуление*/
 *,
 *:before,
@@ -80,7 +79,9 @@ h6 {
 /*--------------------*/
 @font-face {
   font-family: CyrillicOld;
-  src: url("../fonts/CyrillicOld.woff2") format("woff2"), url("../fonts/CyrillicOld.woff") format("woff");
+  src:
+    url("../fonts/CyrillicOld.woff2") format("woff2"),
+    url("../fonts/CyrillicOld.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -196,7 +197,9 @@ body.lock {
 .section__hero .hero__content p {
   font-family: CyrillicOld;
   text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.5);
 }
 .section__hero .hero__content h1 {
   font-size: 3em;
@@ -308,7 +311,9 @@ body.lock {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .section__services .swiper-slide:hover {
   transform: translateY(-5px);
@@ -322,7 +327,7 @@ body.lock {
   width: 100%;
   max-height: 350px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 5px;
   margin-bottom: 10px;
 }
@@ -354,7 +359,9 @@ body.lock {
 .section .swiper-button-prev,
 .section .swiper-button-next {
   color: #333;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   position: absolute;
   top: 60%;
   z-index: 10;
@@ -428,7 +435,7 @@ body.lock {
   max-width: 350px;
   border-radius: 4px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 .details.visible {
@@ -445,7 +452,9 @@ body.lock {
   overflow: hidden;
   opacity: 0;
   transform: scale(0.9);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 .details.visible.animate {
   opacity: 1;
@@ -498,7 +507,9 @@ body.lock {
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
-.tab-button:focus, .tab-button:focus-visible, .tab-button:active {
+.tab-button:focus,
+.tab-button:focus-visible,
+.tab-button:active {
   border: none !important;
 }
 
@@ -517,7 +528,9 @@ body.lock {
   padding-right: 10px;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
 }
 .gallery-grid:first-of-type {
   display: grid;
@@ -528,8 +541,10 @@ body.lock {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.3s, filter 0.3s;
+  object-fit: cover;
+  transition:
+    transform 0.3s,
+    filter 0.3s;
   cursor: pointer;
 }
 .gallery-item:hover {
@@ -562,7 +577,7 @@ body.lock {
   max-width: 90%;
   max-height: 90%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   z-index: 2000;
   filter: none !important;
   cursor: zoom-out;
@@ -619,7 +634,8 @@ body.lock {
   text-transform: uppercase;
   margin-bottom: 60px;
 }
-.contacts__address, .contacts__phone {
+.contacts__address,
+.contacts__phone {
   font-size: 2.5em;
   line-height: normal;
   color: #333;
@@ -661,7 +677,7 @@ body.lock {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .icon:hover {
   transform: scale(1.1);
@@ -751,7 +767,8 @@ body.lock {
     top: 9px;
     transition: 0.3s;
   }
-  .header__burger::before, .header__burger::after {
+  .header__burger::before,
+  .header__burger::after {
     content: "";
     background-color: #fff;
     position: absolute;
@@ -936,7 +953,8 @@ body.lock {
     flex-direction: column;
     height: 75%;
   }
-  .details__text, .details__gallery {
+  .details__text,
+  .details__gallery {
     flex: 0 0 100%;
   }
   .details__close {
@@ -998,7 +1016,8 @@ body.lock {
     font-size: 2em;
     margin: 0;
   }
-  .contacts__address, .contacts__phone {
+  .contacts__address,
+  .contacts__phone {
     font-size: 1.6em;
   }
   .contacts__icons {
