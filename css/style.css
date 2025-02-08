@@ -184,7 +184,7 @@ body.lock {
 
 /*---------------- HERO -----------------*/
 .section__hero {
-  background: url("../image/hero.JPG") no-repeat center top;
+  background: url("../image/hero.jpg") no-repeat center top;
   background-size: cover;
   color: #fff;
   overflow: hidden;
