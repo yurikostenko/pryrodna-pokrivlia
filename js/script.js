@@ -145,10 +145,10 @@ document.addEventListener("DOMContentLoaded", () => {
          el: '.swiper-pagination',
          clickable: true,
       },
-      /*autoplay: {
+      autoplay: {
          delay: 5000, // Автопрокрутка кожні 5 секунд
          disableOnInteraction: false,
-      },*/
+      },
       breakpoints: {
          320: { slidesPerView: 1, spaceBetween: 10 },
          768: { slidesPerView: 2, spaceBetween: 20 },
