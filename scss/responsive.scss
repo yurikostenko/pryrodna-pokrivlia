@@ -1,0 +1,412 @@
+@media (min-width: 1920px) {
+   .container {
+      max-width: 1600px;
+   }
+}
+
+/*--------------- Адаптив HEADER -------------*/
+
+@media (max-width: 920px) {
+   .header__menu ul {
+      gap: 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .header {
+      height: 60px;
+
+      &__content {
+         height: 60px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      &__logo {
+         flex: 0 0 120px;
+      }
+
+      &__burger {
+         display: block;
+         position: relative;
+         width: 30px;
+         height: 20px;
+         z-index: 3;
+         cursor: pointer;
+      }
+
+      &__burger span {
+         position: absolute;
+         background-color: #fff;
+         left: 0;
+         width: 100%;
+         height: 2px;
+         top: 9px;
+         transition: 0.3s;
+      }
+
+      &__burger::before,
+      &__burger::after {
+         content: "";
+         background-color: #fff;
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         left: 0;
+         transition: 0.3s;
+      }
+
+      &__burger::before {
+         top: 0;
+      }
+
+      &__burger::after {
+         bottom: 0;
+      }
+
+      /* Анімація бургер-іконки при відкритті меню */
+      &__burger.active span {
+         opacity: 0;
+      }
+
+      &__burger.active::before {
+         transform: translateY(9px) rotate(45deg);
+      }
+
+      &__burger.active::after {
+         transform: translateY(-9px) rotate(-45deg);
+      }
+
+      &__menu {
+         position: fixed;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(135deg, #cccccc, #aaaaaa);
+         padding: 80px 10px 20px 10px;
+         transition: 0.3s;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+      }
+
+      &__menu ul {
+         display: block;
+      }
+
+      &__menu ul li {
+         margin-bottom: 20px;
+      }
+
+      &__menu ul li a {
+         font-size: 20px;
+         color: #fff;
+         text-decoration: none;
+         transition: 0.3s;
+      }
+
+      &__menu ul li a:hover {
+         color: #ffcc00;
+      }
+
+      &__menu ul li a.active {
+         color: #3f3f3f;
+      }
+
+      /* Показуємо меню при активному бургері */
+      &__menu.active {
+         left: 0;
+      }
+   }
+}
+
+@media (min-width: 1920px) {
+   .container {
+      max-width: 1600px;
+   }
+   .header__menu ul {
+      font-size: 1.5em;
+   }
+   .header__logo img {
+      width: 200px;
+   }
+}
+
+/*---------------- Адаптив секцій -----------------*/
+
+@media (max-width: 768px) {
+   .section {
+      min-height: calc(100vh - 60px);
+      padding-top: 60px;
+   }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+   .section {
+      height: auto;
+   }
+}
+
+/*--------------- Адаптив  HERO -------------*/
+
+@media (max-width: 768px) {
+   .section {
+      &__hero {
+         margin-top: 60px;
+         .hero__content {
+            h1 {
+               font-size: 2em;
+               padding-top: 50px;
+            }
+
+            p {
+               font-size: 1.2em;
+            }
+         }
+      }
+   }
+
+   .btn {
+      font-size: 1em;
+   }
+}
+
+@media (min-width: 1920px) {
+   .section {
+      &__hero {
+         .hero__content {
+            h1 {
+               font-size: 3.5em;
+               padding-top: 50px;
+            }
+
+            p {
+               font-size: 2em;
+            }
+         }
+      }
+   }
+}
+
+/*--------------- Адаптив ABOUT ----------------*/
+
+@media (min-width: 1921px) {
+   .about__text {
+      font-size: 1.4em;
+   }
+}
+
+@media (max-width: 768px) {
+   .section__about {
+      padding: 30px 0;
+   }
+
+   .about__content {
+      flex-direction: column-reverse;
+   }
+}
+
+/*--------------- Адаптив  SERVICES -------------*/
+
+@media (min-width: 1920px) {
+   .section {
+      &__services {
+         padding-top: 0;
+         .services__content {
+            max-width: 1600px;
+            margin-top: -80px;
+            .section__title {
+               margin-bottom: 80px;
+               &::after {
+                  margin-top: 50px;
+               }
+            }
+         }
+
+         .swiper-container {
+            max-width: 1600px;
+         }
+         .swiper-pagination {
+            .swiper-pagination-bullet {
+               position: relative; /* Забезпечує можливість зміщення */
+               top: -40px; /* Піднімаємо буліти */
+               transition: top 0.3s ease; /* Додаємо анімацію */
+               height: 15px;
+               width: 15px;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .section {
+      &__services {
+         padding-top: 10px;
+         .services__content {
+            .section__title {
+               font-size: 1.5em;
+               margin-bottom: 20px;
+            }
+            .section__title::after {
+               width: 80px;
+               margin: 30px auto;
+               height: 3px;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   .section {
+      &__services {
+         .services__content {
+            .section__title {
+               font-size: 1.2em;
+            }
+         }
+      }
+   }
+}
+
+/*--------------- Адаптив блоку беталей SERVICES --------------------*/
+
+@media (max-width: 768px) {
+   .details {
+      &__title {
+         font-size: 1.5rem;
+         top: 35px;
+         line-height: 1.2;
+      }
+      &__text {
+         p {
+            margin-bottom: 10px;
+
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+
+      &__container {
+         flex-direction: column;
+         height: 75%;
+      }
+
+      &__text,
+      &__gallery {
+         flex: 0 0 100%;
+      }
+
+      &__close {
+         font-size: 1.25rem;
+         top: 5px;
+         right: 5px;
+      }
+
+      &__gallery img {
+         max-width: 100%;
+         height: auto;
+         margin: 0 auto;
+      }
+   }
+}
+
+/*---------------- Адаптив GALLERY -----------------*/
+
+@media (min-width: 1920px) {
+   .section {
+      &__gallery {
+         h2 {
+            font-size: 2.2em;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .section__gallery {
+      padding-top: 30px;
+   }
+   .tabs {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   .tab-button {
+      flex: none;
+      width: calc(50% - 10px);
+      margin-bottom: 5px;
+   }
+}
+@media (max-width: 480px) {
+   .tab-button {
+      font-size: 0.9em;
+      padding: 6px 10px;
+   }
+}
+@media (max-width: 768px) {
+   #video {
+      grid-template-columns: 1fr;
+   }
+}
+
+/*---------------- Адаптив CONTACTS -----------------*/
+
+@media (max-width: 768px) {
+   .section {
+      &__contacts {
+         padding: 20px 0;
+      }
+   }
+   .contacts {
+      &__content {
+         flex-direction: column;
+      }
+
+      &__left {
+         flex: 1 1 auto;
+         align-items: center;
+         text-align: center;
+      }
+
+      &__left {
+         h2 {
+            font-size: 2em;
+            margin: 0;
+         }
+      }
+
+      &__address,
+      &__phone {
+         font-size: 1.6em;
+      }
+
+      &__icons {
+         gap: 30px;
+         margin-top: 10px;
+      }
+
+      &__right iframe {
+         height: 400px;
+      }
+   }
+}
+
+/*--------------- Адаптивність FOOTER -------------*/
+
+@media (max-width: 768px) {
+   .footer__content {
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   .footer__menu ul {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+}
