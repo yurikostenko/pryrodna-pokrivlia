@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
          const targetSection = document.querySelector(targetId);
 
          if (targetSection) {
+            // Завантажуємо зображення при відкритті секції
+            loadImages(targetSection);
+
             targetSection.classList.add("visible");
             setTimeout(() => targetSection.classList.add("animate"), 10);
             toggleBodyLock(true);
@@ -61,6 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
          });
       }
    });
+
+   // ============= Функція для завантаження зображень в details =============
+   function loadImages(section) {
+      const images = section.querySelectorAll("img[data-src]");
+      images.forEach(img => {
+         img.src = img.getAttribute("data-src");
+         img.removeAttribute("data-src");
+      });
+   }
 
    // ============= Галерея: відкриття фото на весь екран =============
 
