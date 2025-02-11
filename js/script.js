@@ -216,6 +216,25 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    });
 
+   // ============= Галерея: завантаження відео тільки при кліку (фасади) =============
+
+   document.querySelectorAll('.video-item').forEach(item => {
+      item.querySelector('.play-button').addEventListener('click', function () {
+         const videoId = item.getAttribute('data-video');
+         const iframe = document.createElement('iframe');
+         iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+         iframe.setAttribute('frameborder', '0');
+         iframe.setAttribute('allowfullscreen', 'true');
+         iframe.style.width = '100%';
+         iframe.style.height = '100%';
+         iframe.style.borderRadius = '10px';
+
+         // Замінити прев’ю на iframe
+         item.querySelector('.video-preview').innerHTML = '';
+         item.querySelector('.video-preview').appendChild(iframe);
+      });
+   });
+
    // ============= Меню-бургер =============
    document.querySelector('.header__burger').addEventListener('click', () => {
       document.querySelector('.header__burger').classList.toggle('active');
