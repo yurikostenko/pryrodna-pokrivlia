@@ -608,7 +608,7 @@ body.lock {
   font-size: 40px;
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  padding: 15px 20px;
+  padding: 5px 20px;
   border-radius: 50%;
 }
 
@@ -974,6 +974,11 @@ body.lock {
   }
 }
 @media (max-width: 768px) {
+  #video {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
   .section__gallery {
     padding-top: 30px;
   }
@@ -991,11 +996,6 @@ body.lock {
   .tab-button {
     font-size: 0.9em;
     padding: 6px 10px;
-  }
-}
-@media (max-width: 768px) {
-  #video {
-    grid-template-columns: 1fr;
   }
 }
 /*---------------- Адаптив CONTACTS -----------------*/

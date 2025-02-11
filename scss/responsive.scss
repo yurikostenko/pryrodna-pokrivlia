@@ -330,6 +330,12 @@
 }
 
 @media (max-width: 768px) {
+   #video {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 768px) {
    .section__gallery {
       padding-top: 30px;
    }
@@ -347,11 +353,6 @@
    .tab-button {
       font-size: 0.9em;
       padding: 6px 10px;
-   }
-}
-@media (max-width: 768px) {
-   #video {
-      grid-template-columns: 1fr;
    }
 }
 
