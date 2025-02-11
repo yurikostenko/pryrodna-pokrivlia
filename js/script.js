@@ -198,6 +198,13 @@ document.addEventListener("DOMContentLoaded", () => {
                   grid.style.opacity = '1';
                   grid.style.transform = 'translateY(0)';
                }, 10);
+
+               // Завантажуємо фото лише після відкриття вкладки
+               grid.querySelectorAll("img[data-src]").forEach(img => {
+                  img.src = img.dataset.src;
+                  img.removeAttribute("data-src");
+               });
+
             } else {
                grid.style.opacity = '0';
                grid.style.transform = 'translateY(10px)';
