@@ -183,7 +183,7 @@ body.lock {
 
 /*---------------- HERO -----------------*/
 .section__hero {
-  background: url("../image/hero.webp") no-repeat center top;
+  background: url("../image/hero-2304x1152.webp") no-repeat center top;
   background-size: cover;
   color: #fff;
   overflow: hidden;
@@ -853,8 +853,16 @@ body.lock {
   }
 }
 /*--------------- Адаптив  HERO -------------*/
+@media (max-width: 1200px) {
+  .section__hero {
+    background: url("../image/hero-1920x960.webp") no-repeat center top;
+    background-size: cover;
+  }
+}
 @media (max-width: 768px) {
   .section__hero {
+    background: url("../image/hero-1200x600.webp") no-repeat center top;
+    background-size: cover;
     margin-top: 60px;
   }
   .section__hero .hero__content h1 {
@@ -874,6 +882,9 @@ body.lock {
     padding-top: 50px;
   }
   .section__hero .hero__content p {
+    font-size: 2em;
+  }
+  .btn {
     font-size: 2em;
   }
 }
