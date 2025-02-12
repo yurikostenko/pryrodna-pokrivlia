@@ -65,12 +65,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
    });
 
-   // ============= Функція для завантаження зображень в details =============
+
+
+   // ============= Функція для завантаження зображень в details з використанням IntersectionObserver =============
+
    function loadImages(section) {
       const images = section.querySelectorAll("img[data-src]");
+
+      const observer = new IntersectionObserver((entries, observer) => {
+         entries.forEach(entry => {
+            if (entry.isIntersecting) {
+               // Завантажуємо зображення
+               const img = entry.target;
+               img.src = img.getAttribute("data-src");
+               img.removeAttribute("data-src");
+               observer.unobserve(img); // Зупиняємо спостереження за цим зображенням
+            }
+         });
+      }, { threshold: 0.1 }); // 10% зображення мають бути видимі для активації
+
       images.forEach(img => {
-         img.src = img.getAttribute("data-src");
-         img.removeAttribute("data-src");
+         observer.observe(img);
       });
    }
 
@@ -185,6 +200,18 @@ document.addEventListener("DOMContentLoaded", () => {
       defaultGrid.style.transform = 'translateY(0)';
    }
 
+   // Створюємо спостерігач для завантаження зображень
+   const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+         if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute("data-src");
+            observer.unobserve(img); // Зупиняємо спостереження після завантаження
+         }
+      });
+   }, { threshold: 0.1 }); // Завантажуємо, коли 10% зображення потрапляє в область видимості
+
    tabButtons.forEach(button => {
       button.addEventListener('click', () => {
          tabButtons.forEach(btn => btn.classList.remove('active'));
@@ -199,10 +226,9 @@ document.addEventListener("DOMContentLoaded", () => {
                   grid.style.transform = 'translateY(0)';
                }, 10);
 
-               // Завантажуємо фото лише після відкриття вкладки
+               // Спостерігаємо за зображеннями, щоб завантажити їх, коли вони стають видимими
                grid.querySelectorAll("img[data-src]").forEach(img => {
-                  img.src = img.dataset.src;
-                  img.removeAttribute("data-src");
+                  observer.observe(img);
                });
 
             } else {
