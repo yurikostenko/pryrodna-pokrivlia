@@ -116,7 +116,11 @@
 						</p>
 					</div>
 					<div class="about__image">
-						<img src="image/cover/moshun2.webp" alt="">
+						<img
+							srcset="image/cover/moshun2-small.webp 480w, image/cover/moshun2-medium.webp 800w, image/cover/moshun2-large.webp 1600w"
+							sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+							src="images/cover/moshun2-medium.webp" alt="moshun2 image">
+
 					</div>
 				</div>
 			</div>
@@ -623,7 +627,14 @@
 				<!-- Галерея -->
 				<div class="gallery__content">
 					<div class="gallery-grid" id="buildings">
-						<img src="image/gallery/buildings/kaban1.webp" alt="Будинок під очеретом" class="gallery-item">
+
+						<img srcset="image/gallery/buildings/kaban1-800x600.webp 800w, 
+             image/gallery/buildings/kaban1-1200x900.webp 1200w, 
+             image/gallery/buildings/kaban1-1920x1440.webp 1920w, 
+             image/gallery/buildings/kaban1-2304x1728.webp 2304w" sizes="100vw"
+							src="image/gallery/buildings/kaban1-2304x1728.webp" alt="Будинок під очеретом"
+							class="gallery-item">
+
 						<img src="image/gallery/buildings/kaban2.webp" alt="Будинок під очеретом" class="gallery-item">
 						<img src="image/gallery/buildings/Kanev1.webp" alt="Будинок під очеретом" class="gallery-item">
 						<img src="image/gallery/buildings/Kanev2.webp" alt="Будинок під очеретом" class="gallery-item">

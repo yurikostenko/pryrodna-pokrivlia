@@ -183,7 +183,7 @@ body.lock {
 
 /*---------------- HERO -----------------*/
 .section__hero {
-  background: url("../image/hero-2304x1152.webp") no-repeat center top;
+  background: url("../image/hero-1920x960.webp") no-repeat center top;
   background-size: cover;
   color: #fff;
   overflow: hidden;
@@ -527,6 +527,7 @@ body.lock {
 .gallery-item {
   width: 100%;
   height: auto;
+  max-width: none;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s, filter 0.3s;
@@ -855,14 +856,12 @@ body.lock {
 /*--------------- Адаптив  HERO -------------*/
 @media (max-width: 1200px) {
   .section__hero {
-    background: url("../image/hero-1920x960.webp") no-repeat center top;
-    background-size: cover;
+    background-image: url("../image/hero-1200x600.webp");
   }
 }
 @media (max-width: 768px) {
   .section__hero {
-    background: url("../image/hero-1200x600.webp") no-repeat center top;
-    background-size: cover;
+    background-image: url("../image/hero-800x400.webp");
     margin-top: 60px;
   }
   .section__hero .hero__content h1 {
@@ -877,6 +876,9 @@ body.lock {
   }
 }
 @media (min-width: 1920px) {
+  .section__hero {
+    background-image: url("../image/hero-2304x1152.webp");
+  }
   .section__hero .hero__content h1 {
     font-size: 3.5em;
     padding-top: 50px;

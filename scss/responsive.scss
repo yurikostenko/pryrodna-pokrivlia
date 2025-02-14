@@ -156,8 +156,7 @@
 @media (max-width: 1200px) {
    .section {
       &__hero {
-         background: url("../image/hero-1920x960.webp") no-repeat center top;
-         background-size: cover;
+         background-image: url("../image/hero-1200x600.webp");
       }
    }
 }
@@ -165,8 +164,7 @@
 @media (max-width: 768px) {
    .section {
       &__hero {
-         background: url("../image/hero-1200x600.webp") no-repeat center top;
-         background-size: cover;
+         background-image: url("../image/hero-800x400.webp");
          margin-top: 60px;
          .hero__content {
             h1 {
@@ -189,6 +187,7 @@
 @media (min-width: 1920px) {
    .section {
       &__hero {
+         background-image: url("../image/hero-2304x1152.webp");
          .hero__content {
             h1 {
                font-size: 3.5em;
