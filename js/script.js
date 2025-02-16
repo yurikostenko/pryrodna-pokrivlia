@@ -19,6 +19,29 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    });
 
+   /*// =============== Функція для встановлення фону залежно від ширини екрану =============
+   function setHeroBackground() {
+      const hero = document.querySelector('.section__hero');
+      const screenWidth = window.innerWidth;
+
+      // Встановлюємо відповідне зображення залежно від розміру екрану
+      if (screenWidth >= 1920) {
+         hero.style.backgroundImage = 'url("image/hero-1920x960.webp")';
+      } else if (screenWidth >= 768) {
+         hero.style.backgroundImage = 'url("image/hero-1200x600.webp")';
+      } else {
+         hero.style.backgroundImage = 'url("image/hero-800x400.webp")';
+      }
+   }
+
+   // Викликаємо функцію при завантаженні сторінки
+   window.addEventListener('load', setHeroBackground);
+
+   // Викликаємо функцію при зміні розміру вікна
+   window.addEventListener('resize', setHeroBackground);*/
+
+
+
    // ============= Блокування скролу ==================
    function toggleBodyLock(state) {
       if (state) {
