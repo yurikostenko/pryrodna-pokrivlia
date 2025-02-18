@@ -19,6 +19,9 @@
 	<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 	<link rel="manifest" href="site.webmanifest">
 
+	<link rel="preload" as="image" href="image/hero-1920x960.webp" type="image/webp" fetchpriority="high">
+
+
 	<link rel="preload" href="../fonts/CyrillicOld.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 	<link rel="preload" href="../fonts/CyrillicOld.woff" as="font" type="font/woff" crossorigin="anonymous">
 
@@ -59,7 +62,7 @@
 				<source srcset="image/hero-1920x960.webp" media="(min-width: 1200px)">
 				<source srcset="image/hero-1200x600.webp" media="(min-width: 800px)">
 				<img src="image/hero-800x400.webp" alt="Дах під очеретом" width="1920" height="960" loading="eager"
-					decoding="async">
+					decoding="async" fetchpriority="high">
 			</picture>
 			<div class="container">
 				<div class="hero__content">
