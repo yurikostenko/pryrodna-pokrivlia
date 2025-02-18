@@ -183,14 +183,31 @@ body.lock {
 
 /*---------------- HERO -----------------*/
 .section__hero {
-  background: url("../image/hero-800x400.webp") no-repeat center top;
-  background-size: cover;
+  position: relative;
   color: #fff;
   overflow: hidden;
   margin-top: 90px;
   align-items: flex-start;
-  position: relative;
-  padding-top: 90px;
+  padding-top: 120px;
+}
+.section__hero picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.section__hero picture img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 10px;
+     object-position: center 10px;
+  width: 100%;
+  height: 100%;
+}
+.section__hero .hero__content {
+  z-index: 1;
 }
 .section__hero .hero__content h1,
 .section__hero .hero__content p {
@@ -201,14 +218,12 @@ body.lock {
 .section__hero .hero__content h1 {
   font-size: 3em;
   line-height: 1.3;
-  display: inline-block;
 }
 .section__hero .hero__content p {
   font-size: 1.5em;
   line-height: 1.6;
   letter-spacing: 0.05em;
   margin-top: 20px;
-  display: inline-block;
 }
 
 /*---------------Кнопки--------------*/
@@ -869,15 +884,7 @@ body.lock {
     font-size: 1em;
   }
 }
-@media (min-width: 768px) {
-  .section__hero {
-    background-image: url("../image/hero-1200x600.webp");
-  }
-}
 @media (min-width: 1920px) {
-  .section__hero {
-    background-image: url("../image/hero-1920x960.webp");
-  }
   .section__hero .hero__content h1 {
     font-size: 3.5em;
     padding-top: 50px;
