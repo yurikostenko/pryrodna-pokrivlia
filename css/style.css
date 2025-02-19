@@ -80,10 +80,10 @@ h6 {
 /*--------------------*/
 @font-face {
   font-family: CyrillicOld;
-  src: url("../fonts/CyrillicOld.woff2") format("woff2"), url("../fonts/CyrillicOld.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+  src: url("../fonts/CyrillicOld.woff2") format("woff2");
+  src-font-weight: 600;
+  src-font-style: normal;
+  src-font-display: swap;
 }
 body {
   font-family: "Arial", sans-serif;
@@ -524,7 +524,9 @@ body.lock {
   gap: 20px;
 }
 .gallery-grid {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
   max-height: 75vh;
@@ -535,9 +537,11 @@ body.lock {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .gallery-grid:first-of-type {
-  display: grid;
+  position: static;
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .gallery-item {
   width: 100%;

@@ -2,11 +2,11 @@
 
 @font-face {
    font-family: CyrillicOld;
-   src:
-      url("../fonts/CyrillicOld.woff2") format("woff2"),
-   font-weight: 600;
-   font-style: normal;
-   font-display: swap;
+   src: url("../fonts/CyrillicOld.woff2") format("woff2") {
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+   }
 }
 
 body {
@@ -528,7 +528,9 @@ body.lock {
    gap: 20px;
 
    &-grid {
-      display: none;
+      position: absolute;
+      visibility: hidden;
+      display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 15px;
       max-height: 75vh;
@@ -542,9 +544,13 @@ body.lock {
    }
 
    &-grid:first-of-type {
-      display: grid;
+      position: static;
+      visibility: visible;
       opacity: 1;
       transform: translateY(0);
+      transition:
+         opacity 0.4s ease,
+         transform 0.4s ease;
    }
 
    &-item {
