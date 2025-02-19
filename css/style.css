@@ -867,9 +867,28 @@ body.lock {
     padding-top: 60px;
   }
 }
+/*@media (max-width: 1024px) and (orientation: landscape) {
+   .section {
+      height: auto;
+      &__hero {
+         padding-top: 0;
+         .hero__content {
+            h1 {
+               font-size: 2.5em;
+            }
+            p {
+               font-size: 1.2em;
+            }
+         }
+      }
+   }
+}*/
 @media (max-width: 1024px) and (orientation: landscape) {
   .section {
     height: auto;
+  }
+  .section__hero {
+    padding-top: 0;
   }
 }
 /*--------------- Адаптив  HERO -------------*/
@@ -886,6 +905,19 @@ body.lock {
   }
   .btn {
     font-size: 1em;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .section__hero .hero__content h1 {
+    font-size: 1.5em;
+  }
+  .section__hero .hero__content p {
+    font-size: 1em;
+  }
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.8em;
+    bottom: 20px;
   }
 }
 @media (min-width: 1920px) {
@@ -906,7 +938,7 @@ body.lock {
     font-size: 1.4em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .section__about {
     padding: 30px 0;
   }
