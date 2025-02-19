@@ -97,12 +97,19 @@ document.addEventListener("DOMContentLoaded", () => {
          document.querySelector(".fullscreen-clone")?.remove();
          document.querySelector(".fullscreen-overlay")?.remove();
 
-         // Створюємо елемент overlay і клон зображення
+         // Отримуємо найбільше доступне зображення
+         const largeImage = item.dataset.xlarge;
+         if (!largeImage) return; // Якщо немає, виходимо
+
+         // Створюємо елемент overlay
          const overlay = document.createElement("div");
          overlay.classList.add("fullscreen-overlay");
 
-         const clone = item.cloneNode(true);
+         // Створюємо клон зображення
+         const clone = document.createElement("img");
          clone.classList.add("fullscreen-clone");
+         clone.src = largeImage;
+         clone.alt = item.alt || ""; // Зберігаємо опис зображення
 
          // Додаємо overlay та клон на сторінку
          document.body.append(overlay, clone);
@@ -124,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
          }));
       });
    });
+
 
    // ============= Навігація меню =============
    const sections = document.querySelectorAll("section");
