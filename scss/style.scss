@@ -4,7 +4,6 @@
    font-family: CyrillicOld;
    src:
       url("../fonts/CyrillicOld.woff2") format("woff2"),
-      url("../fonts/CyrillicOld.woff") format("woff");
    font-weight: 600;
    font-style: normal;
    font-display: swap;
@@ -151,7 +150,7 @@ body.lock {
 
          h1,
          p {
-            font-family: CyrillicOld;
+            font-family: CyrillicOld, sans-serif;
             text-transform: uppercase;
             text-shadow:
                2px 2px 4px rgba(0, 0, 0, 0.7),
