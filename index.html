@@ -19,8 +19,6 @@
 	<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 	<link rel="manifest" href="site.webmanifest">
 
-	<link rel="preload" as="image" href="image/hero-480x240.webp" type="image/webp" fetchpriority="high">
-
 	<link rel="preload" href="../fonts/CyrillicOld.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<title>Очеретяний дах – екологічна покрівля</title>
@@ -55,10 +53,12 @@
 
 		<section id="hero" class="section section__hero">
 			<picture>
-				<source srcset="image/hero-1920x960.webp" media="(min-width: 1200px)">
-				<source srcset="image/hero-1200x600.webp" media="(min-width: 800px)">
-				<img src="image/hero-800x400.webp" alt="Дах під очеретом" width="1920" height="960" loading="eager"
-					decoding="async">
+				<source srcset="image/hero-1920x960.webp" media="(min-width: 1920px)" sizes="100vw">
+				<source srcset="image/hero-1200x600.webp" media="(min-width: 1200px)" sizes="100vw">
+				<source srcset="image/hero-800x400.webp" media="(min-width: 768px)" sizes="100vw">
+				<source srcset="image/hero-480x240.webp" media="(max-width: 767px)" sizes="100vw">
+				<img src="image/hero-480x240.webp" alt="Дах під очеретом" width="1920" height="960" decoding="async"
+					fetchpriority="high">
 			</picture>
 			<div class="container">
 				<div class="hero__content">
