@@ -524,9 +524,7 @@ body.lock {
   gap: 20px;
 }
 .gallery-grid {
-  position: absolute;
-  visibility: hidden;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
   max-height: 75vh;
@@ -537,8 +535,7 @@ body.lock {
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .gallery-grid:first-of-type {
-  position: static;
-  visibility: visible;
+  display: grid;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.4s ease, transform 0.4s ease;
