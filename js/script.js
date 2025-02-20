@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 
    // ============= Галерея: відкриття фото на весь екран =============
-
    document.querySelectorAll(".gallery-item").forEach(item => {
       item.addEventListener("click", () => {
          // Видаляємо попереднє зображення, якщо воно є
@@ -98,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
          document.querySelector(".fullscreen-overlay")?.remove();
 
          // Отримуємо найбільше доступне зображення
-         const largeImage = item.dataset.xlarge;
+         const largeImage = item.dataset.xlarge || item.src;
          if (!largeImage) return; // Якщо немає, виходимо
 
          // Створюємо елемент overlay
@@ -111,6 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
          clone.src = largeImage;
          clone.alt = item.alt || ""; // Зберігаємо опис зображення
 
+         // Блокуємо скрол сторінки
+         document.body.style.overflow = "hidden";
+
          // Додаємо overlay та клон на сторінку
          document.body.append(overlay, clone);
 
@@ -120,17 +122,29 @@ document.addEventListener("DOMContentLoaded", () => {
             clone.classList.add("fullscreen-active");
          }, 10);
 
-         // Закриття по кліку
-         [overlay, clone].forEach(el => el.addEventListener("click", () => {
+         // Функція закриття
+         const closeFullscreen = () => {
             overlay.classList.remove("fullscreen-active");
             clone.classList.remove("fullscreen-active");
+            document.body.style.overflow = ""; // Повертаємо прокрутку
             setTimeout(() => {
                overlay.remove();
                clone.remove();
             }, 300);
-         }));
+         };
+
+         // Закриття по кліку
+         [overlay, clone].forEach(el => el.addEventListener("click", closeFullscreen));
+
+         // Закриття по Escape
+         document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+               closeFullscreen();
+            }
+         }, { once: true });
       });
    });
+
 
 
    // ============= Навігація меню =============
