@@ -967,10 +967,6 @@ body.lock {
     height: 15px;
     width: 15px;
   }
-  /*.btn {
-     padding: 8px 15px;
-     font-size: 1em;
-  }*/
 }
 @media (max-width: 768px) {
   .section__services {
