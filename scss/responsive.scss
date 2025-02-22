@@ -275,9 +275,9 @@
          }
          .swiper-pagination {
             .swiper-pagination-bullet {
-               position: relative; /* Забезпечує можливість зміщення */
-               top: -40px; /* Піднімаємо буліти */
-               transition: top 0.3s ease; /* Додаємо анімацію */
+               position: relative;
+               top: -40px;
+               transition: top 0.3s ease;
                height: 15px;
                width: 15px;
             }

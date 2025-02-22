@@ -525,12 +525,12 @@ body.lock {
 }
 .gallery-grid {
   display: none;
+  opacity: 0;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
   max-height: 75vh;
   overflow-y: auto;
   padding-right: 10px;
-  opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -596,7 +596,6 @@ body.lock {
 }
 
 #video {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
@@ -962,12 +961,16 @@ body.lock {
     max-width: 1600px;
   }
   .section__services .swiper-pagination .swiper-pagination-bullet {
-    position: relative; /* Забезпечує можливість зміщення */
-    top: -40px; /* Піднімаємо буліти */
-    transition: top 0.3s ease; /* Додаємо анімацію */
+    position: relative;
+    top: -40px;
+    transition: top 0.3s ease;
     height: 15px;
     width: 15px;
   }
+  /*.btn {
+     padding: 8px 15px;
+     font-size: 1em;
+  }*/
 }
 @media (max-width: 768px) {
   .section__services {
