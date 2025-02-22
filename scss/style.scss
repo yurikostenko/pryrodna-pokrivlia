@@ -32,7 +32,6 @@ body.lock {
 .header {
    background: #3f3f3f;
    color: #fff;
-   //padding: 15px 0;
    position: fixed;
    top: 0;
    left: 0;
@@ -232,11 +231,10 @@ body.lock {
 
    &__image {
       flex: 1;
-      //background: url("path_to_image.jpg") no-repeat center center;
-      background-size: cover; // зображення займатиме всю область
+      background-size: cover;
       height: 100%;
       width: auto;
-      margin-bottom: 20px; // висота для зображення
+      margin-bottom: 20px;
    }
 }
 
@@ -717,7 +715,6 @@ body.lock {
    display: inline-block;
    width: 40px;
    height: 40px;
-   //border-radius: 50%;
    overflow: hidden;
    transition: transform 0.3s ease;
 

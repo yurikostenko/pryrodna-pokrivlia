@@ -145,23 +145,6 @@
    }
 }
 
-/*@media (max-width: 1024px) and (orientation: landscape) {
-   .section {
-      height: auto;
-      &__hero {
-         padding-top: 0;
-         .hero__content {
-            h1 {
-               font-size: 2.5em;
-            }
-            p {
-               font-size: 1.2em;
-            }
-         }
-      }
-   }
-}*/
-
 @media (max-width: 1024px) and (orientation: landscape) {
    .section {
       height: auto;
