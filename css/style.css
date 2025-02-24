@@ -248,24 +248,20 @@ body.lock {
 .section__about {
   background: #f4f4f4;
   color: #333;
-  padding: 50px 0;
 }
 
-.about__content {
+.about__wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-.about__text {
+.about__content {
   flex: 1;
+  max-width: 50%;
   padding-right: 20px;
+}
+.about__text {
   font-size: 1.2em;
   line-height: 1.3;
-}
-.about__text h2 {
-  font-size: 1.5em;
-  font-weight: 500;
-  padding-bottom: 20px;
 }
 .about__text p {
   padding-bottom: 20px;
@@ -275,44 +271,41 @@ body.lock {
 }
 .about__image {
   flex: 1;
-  background-size: cover;
-  height: 100%;
-  width: auto;
-  margin-bottom: 20px;
+  max-width: 50%;
+}
+.about__image img {
+  max-height: 787px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section__title {
+  font-family: CyrillicOld, sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 5px rgba(255, 255, 255, 0.5);
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-bottom: 20px;
 }
 
 /*---------------- SERVICES -----------------*/
 .section__services {
   background: linear-gradient(to top, #f4f4f4, #ddd);
   color: #333;
-  padding: 40px 20px;
+  padding: 0 20px 40px;
 }
 .section__services .services__content {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
-.section__services .services__content .section__title {
-  font-size: clamp(1.8em, 2.5vw, 2.5em);
-  font-weight: bold;
-  color: #3f3f3f;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  line-height: 1.4;
-}
-.section__services .services__content .section__title::after {
-  content: "";
-  display: block;
-  width: 180px;
-  height: 4px;
-  background: #3f3f3f;
-  margin: 20px auto 0;
-}
 .section__services .swiper-container {
   width: 100%;
   overflow: hidden;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 .section__services .swiper-slide {
   display: flex;
@@ -470,14 +463,7 @@ body.lock {
 /*---------------- GALLERY -----------------*/
 .section__gallery {
   position: relative;
-  padding-top: 50px;
-}
-.section__gallery h2 {
-  font-size: 1.8em;
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-  font-weight: 600;
-  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .tabs {
@@ -487,7 +473,7 @@ body.lock {
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 0 10px 10px;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto 20px;
@@ -755,8 +741,6 @@ body.lock {
 @media (max-width: 768px) {
   .header {
     height: 60px;
-    /* Анімація бургер-іконки при відкритті меню */
-    /* Показуємо меню при активному бургері */
   }
   .header__content {
     height: 60px;
@@ -863,14 +847,6 @@ body.lock {
     padding-top: 60px;
   }
 }
-@media (max-width: 1024px) and (orientation: landscape) {
-  .section {
-    height: auto;
-  }
-  .section__hero {
-    padding-top: 0;
-  }
-}
 /*--------------- Адаптив  HERO -------------*/
 @media (max-width: 768px) {
   .section__hero {
@@ -885,19 +861,6 @@ body.lock {
   }
   .btn {
     font-size: 1em;
-  }
-}
-@media (max-width: 1024px) and (orientation: landscape) {
-  .section__hero .hero__content h1 {
-    font-size: 1.5em;
-  }
-  .section__hero .hero__content p {
-    font-size: 1em;
-  }
-  .btn {
-    padding: 8px 15px;
-    font-size: 0.8em;
-    bottom: 20px;
   }
 }
 @media (min-width: 1920px) {
@@ -919,27 +882,42 @@ body.lock {
   }
 }
 @media (max-width: 1024px) {
-  .section__about {
+  .about__wrapper {
+    flex-direction: column-reverse;
+    gap: 30px;
     padding: 30px 0;
   }
-  .about__content {
-    flex-direction: column-reverse;
+  .about__content,
+  .about__image {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1920px) {
+  .section__title {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .section__about {
+    padding-top: 0;
+  }
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .section__title {
+    font-size: 1.2rem;
   }
 }
 /*--------------- Адаптив  SERVICES -------------*/
 @media (min-width: 1920px) {
-  .section__services {
-    padding-top: 0;
-  }
   .section__services .services__content {
     max-width: 1600px;
     margin-top: -80px;
   }
   .section__services .services__content .section__title {
     margin-bottom: 80px;
-  }
-  .section__services .services__content .section__title::after {
-    margin-top: 50px;
   }
   .section__services .swiper-container {
     max-width: 1600px;
@@ -954,21 +932,7 @@ body.lock {
 }
 @media (max-width: 768px) {
   .section__services {
-    padding-top: 10px;
-  }
-  .section__services .services__content .section__title {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-  .section__services .services__content .section__title::after {
-    width: 80px;
-    margin: 30px auto;
-    height: 3px;
-  }
-}
-@media (max-width: 480px) {
-  .section__services .services__content .section__title {
-    font-size: 1.2em;
+    padding-top: 0;
   }
 }
 /*--------------- Адаптив блоку беталей SERVICES --------------------*/
@@ -1003,11 +967,6 @@ body.lock {
   }
 }
 /*---------------- Адаптив GALLERY -----------------*/
-@media (min-width: 1920px) {
-  .section__gallery h2 {
-    font-size: 2.2em;
-  }
-}
 @media (max-width: 768px) {
   #video {
     grid-template-columns: 1fr;
@@ -1015,7 +974,7 @@ body.lock {
 }
 @media (max-width: 768px) {
   .section__gallery {
-    padding-top: 30px;
+    padding-top: 20px;
   }
   .tabs {
     flex-wrap: wrap;
@@ -1025,15 +984,6 @@ body.lock {
     flex: none;
     width: calc(50% - 10px);
     margin-bottom: 5px;
-  }
-}
-@media (max-width: 480px) {
-  .section__gallery {
-    padding-top: 15px;
-  }
-  .section__gallery h2 {
-    font-size: 1.2em;
-    padding-bottom: 5px;
   }
 }
 @media (max-width: 480px) {
