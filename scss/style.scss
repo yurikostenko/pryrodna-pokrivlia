@@ -228,6 +228,7 @@ body.lock {
    &__image {
       flex: 1;
       max-width: 50%;
+      margin: 30px;
    }
 
    &__image img {
@@ -240,9 +241,6 @@ body.lock {
 .section__title {
    font-family: CyrillicOld, sans-serif;
    text-transform: uppercase;
-   text-shadow:
-      2px 2px 4px rgba(0, 0, 0, 0.5),
-      0 0 5px rgba(255, 255, 255, 0.5);
    font-size: 1.8rem;
    font-weight: 500;
    line-height: 1.2;
@@ -261,6 +259,12 @@ body.lock {
          max-width: 1200px;
          margin: 0 auto;
          text-align: center;
+      }
+
+      .section__subtitle {
+         font-family: CyrillicOld, sans-serif;
+         font-size: 1.8rem;
+         padding-bottom: 20px;
       }
 
       .swiper-container {
@@ -305,12 +309,14 @@ body.lock {
 
                .slide__text-title {
                   font-size: clamp(1.5em, 2vw, 1.8em);
+                  letter-spacing: clamp(0.02em, 0.3vw, 0.08em);
                   font-weight: bold;
                   margin-bottom: 10px;
                }
 
                .slide__text-subtitle {
                   font-size: clamp(1em, 1.2vw, 1.1em);
+                  letter-spacing: clamp(0.02em, 0.15vw, 0.06em);
                   margin-bottom: 20px;
                   white-space: nowrap;
                   overflow: hidden;
@@ -326,6 +332,10 @@ body.lock {
             }
          }
       }
+   }
+
+   .swiper-container {
+      --swiper-pagination-bottom: 38px;
    }
 
    .swiper-pagination {
@@ -362,6 +372,7 @@ body.lock {
 
    &__title {
       font-size: 2rem;
+      white-space: nowrap;
       color: #fff;
       text-align: center;
       position: absolute;
@@ -473,7 +484,7 @@ body.lock {
    padding: 0 10px 10px;
    width: 100%;
    max-width: 1000px;
-   margin: 0 auto 20px;
+   margin: 0 auto;
 }
 
 .tab-button {
@@ -510,6 +521,10 @@ body.lock {
    flex-direction: column;
    align-items: center;
    gap: 20px;
+
+   &__content {
+      padding: 20px 0;
+   }
 
    &-grid {
       display: none;
