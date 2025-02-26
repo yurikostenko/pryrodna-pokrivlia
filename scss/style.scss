@@ -315,9 +315,9 @@ body.lock {
                }
 
                .slide__text-subtitle {
-                  font-size: clamp(1.1em, 1.1vw, 1.3em);
+                  font-size: clamp(1.1em, 2vw, 1.2em);
                   letter-spacing: clamp(0.02em, 0.15vw, 0.06em);
-                  line-height: 1.1;
+                  line-height: 1;
                   margin-bottom: 10px;
                   height: 70px;
                }
