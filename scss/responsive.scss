@@ -308,12 +308,12 @@
 
       &__container {
          flex-direction: column;
-         height: 75%;
+         height: 87%;
       }
 
       &__text,
       &__gallery {
-         flex: 0 0 100%;
+         flex: 1 1 100%;
       }
 
       &__close {
@@ -325,7 +325,6 @@
       &__gallery img {
          max-width: 100%;
          height: auto;
-         margin: 0 auto;
       }
    }
 }

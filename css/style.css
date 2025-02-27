@@ -401,7 +401,8 @@ body.lock {
   gap: 20px;
   width: 90%;
   max-width: 1200px;
-  height: 80%;
+  height: 90%;
+  margin-top: auto;
   background: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -974,10 +975,10 @@ body.lock {
   }
   .details__container {
     flex-direction: column;
-    height: 75%;
+    height: 87%;
   }
   .details__text, .details__gallery {
-    flex: 0 0 100%;
+    flex: 1 1 100%;
   }
   .details__close {
     font-size: 1.25rem;
@@ -987,7 +988,6 @@ body.lock {
   .details__gallery img {
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
   }
 }
 /*---------------- Адаптив GALLERY -----------------*/
