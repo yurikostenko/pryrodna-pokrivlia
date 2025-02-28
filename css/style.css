@@ -310,7 +310,7 @@ body.lock {
   width: 100%;
   overflow: hidden;
   max-width: 1200px;
-  margin: 20px auto 0;
+  margin: 10px auto 0;
 }
 .section__services .swiper-slide {
   display: flex;
@@ -361,7 +361,7 @@ body.lock {
   transform: translate(0px, 0px);
 }
 .section .swiper-container {
-  --swiper-pagination-bottom: 38px;
+  --swiper-pagination-bottom: 20px;
 }
 .section .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #3f3f3f;
